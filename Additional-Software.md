@@ -17,8 +17,18 @@
 * vlc - media player
 * gimp - image editor
 * code - VSCode
-* tree
-* vifm
+* tree - directory structure
+* vifm - file manager for vim
+* scrot - screenshots
+* shellcheck - script proofreading
+* youtube-dl - video downloader
+* keepass - password manager
+
+#### NTP
+install ntp
+```
+sudo systemctl enable ntpd
+```
 
 #### SSH
 install openssh
@@ -27,11 +37,15 @@ sudo systemctl enable sshd
 ```
 
 #### Wallpaper
-* pacwall
-* imagemagick
+paru pacwall
+
+install imagemagick
 
 #### External Disk Tools
-install udisks2 udiskie
+install udisks2
+
+paru udiskie
+
 vim /etc/udev/rules.d/99-udisks2.rules
 ```
 ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
@@ -39,8 +53,16 @@ ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
 
 #### Numlock Set at Login
 install numlockx
+
 vim /etc/lightdm/lightdm.conf
+
 under [Seat:*]
 ```
 greeter-setup-script=/usr/bin/numlockx on
+```
+
+#### Sensors
+install lm_sensors
+```
+sudo sensors-detect
 ```

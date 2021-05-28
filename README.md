@@ -187,7 +187,7 @@ mount /dev/sdX1 /boot/EFI
 #
 #### Install Grub and EFI tools
 ```
-pacman -S grub efibootmgr dosfstools os-prober mtools base-devel
+pacman -S grub efibootmgr dosfstools os-prober mtools base-devel nfts-3g
 ```
 #### Add Grub
 ```
@@ -209,7 +209,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #
 #### Add Additional Packages
 ```
-pacman -S networkmanager git wget bash unzip unrar rsync samba cronie python-pip
+pacman -S networkmanager git wget bash unzip unrar rsync samba cronie python-pip exfat-utils
 ```
 #### Enable Network Manger
 ```

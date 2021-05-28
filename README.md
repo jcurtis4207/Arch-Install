@@ -250,4 +250,4 @@ cd paru
 makepkg -sri
 ```
 
-link to new page
+[Add additional software as needed](../Additional-Software.md)

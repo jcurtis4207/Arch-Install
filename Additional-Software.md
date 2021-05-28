@@ -24,6 +24,11 @@
 * youtube-dl - video downloader
 * keepass - password manager
 
+#### AwesomeWM Autorun Script
+```
+chmod +x ~/.config/awesome/autorun.sh
+```
+
 #### NTP
 install ntp
 ```
@@ -65,4 +70,15 @@ greeter-setup-script=/usr/bin/numlockx on
 install lm_sensors
 ```
 sudo sensors-detect
+```
+
+## Laptop Specific Software
+#### Battery
+install acpi xf86-input-libinput
+
+#### Brightness
+install acpilight
+```
+vim /etc/udev/rules.d/backlight.rules
+ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="acpi_video0", GROUP="video", MODE="0644" 
 ```

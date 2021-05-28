@@ -1,6 +1,10 @@
 # Arch-Install
 ## Installation Instructions - Arch EFI
 #
+#### Set Key Mode
+```
+loadkeys us
+```
 #### Verify Boot Mode
 ```
 ls /sys/firmware/efi/efivars
@@ -205,11 +209,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #
 #### Add Additional Packages
 ```
-pacman -S networkmanager git wget mlocate bash unzip unrar rsync samba cronie python-pip
-```
-#### Update locate database
-```
-updatedb
+pacman -S networkmanager git wget bash unzip unrar rsync samba cronie python-pip
 ```
 #### Enable Network Manger
 ```
@@ -243,27 +243,11 @@ sudo pacman -S xorg
 sudo pacman -S lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm
 ```
-#### Install Yay for AUR Installation
+#### Install Paru for AUR Installation
 ```
-git clone https://aur.archlinux.org/yay-git.git
-cd yay-git
+git clone https://aur.archlinux.org/paru.git
+cd paru
 makepkg -sri
 ```
-#### Install Additional Software as Needed
-* awesome - window manager (includes panel & wallpaper)
-* *awesome-freedesktop - menu for awesome
-* geany - text editor
-* *spacefm - file manager
-* firefox - web browser
-* dmenu - launcher
-* picom - compositor
-* alacritty - terminal emulator
-* materia-gtk-theme
-* feh - image viewer
-* vlc - media player
-* gimp - image editor
-* code - VSCode
-* alsa-utils - audio utilities
-* nitrogen - wallpaper
-* tint2 - panel
 
+link to new page

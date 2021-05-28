@@ -50,17 +50,17 @@ install imagemagick
 install udisks2
 
 paru udiskie
-
-vim /etc/udev/rules.d/99-udisks2.rules
 ```
+vim /etc/udev/rules.d/99-udisks2.rules
+    add line:
 ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
 ```
 
 #### Numlock Set at Login
 install numlockx
-
+```
 vim /etc/lightdm/lightdm.conf
-
+```
 under [Seat:*]
 ```
 greeter-setup-script=/usr/bin/numlockx on
@@ -80,5 +80,6 @@ install acpi xf86-input-libinput
 install acpilight
 ```
 vim /etc/udev/rules.d/backlight.rules
+   add line:
 ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="acpi_video0", GROUP="video", MODE="0644" 
 ```

@@ -23,6 +23,7 @@
 * shellcheck - script proofreading
 * youtube-dl - video downloader
 * keepass - password manager
+* perl-rename - file rename utility
 
 #### AwesomeWM Autorun Script
 ```
